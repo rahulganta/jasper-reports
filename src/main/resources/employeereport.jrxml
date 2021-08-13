@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Simple_Blue" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="16d35d71-0f27-401c-953d-0497e43ed930">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <field name="empId" class="java.lang.Integer"/>
+    <field name="empName" class="java.lang.String"/>
+    <field name="empSal" class="java.lang.Double"/>
+    <field name="empDept" class="java.lang.String"/>
+    <background>
+        <band/>
+    </background>
+    <title>
+        <band height="72">
+            <frame>
+                <reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#F7F9FA" uuid="a58349d4-b6a4-46a8-b503-4d862e5c9c63"/>
+                <staticText>
+                    <reportElement x="20" y="20" width="234" height="43" forecolor="#000000" uuid="4e4d74f2-e9ed-4a0e-b1c8-24e8043429c6"/>
+                    <textElement>
+                        <font size="34" isBold="true"/>
+                    </textElement>
+                    <text><![CDATA[Iris Analytics]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="395" y="43" width="180" height="20" forecolor="#000000" uuid="c7db2168-6fe4-4591-a0aa-99bd92ba4e7c"/>
+                    <textElement textAlignment="Right">
+                        <font size="14" isBold="false"/>
+                    </textElement>
+                    <text><![CDATA[Add a description here]]></text>
+                </staticText>
+            </frame>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="13"/>
+    </pageHeader>
+    <detail>
+        <band height="60">
+            <line>
+                <reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="4e3c4f63-1a3e-4eb1-abdc-f64e7415f999"/>
+            </line>
+            <textField>
+                <reportElement x="0" y="19" width="80" height="30" uuid="429a17e4-923f-489e-9917-9d33e6610b06">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c19f18f8-a152-44e4-bfcf-e1bc9659d9e0"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{empId}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="0" y="-2" width="80" height="21" uuid="9158b877-e40c-4f89-8991-7ab139010651">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c19f18f8-a152-44e4-bfcf-e1bc9659d9e0"/>
+                </reportElement>
+                <text><![CDATA[emp Id]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="80" y="20" width="100" height="30" uuid="8939ee2a-b529-4a1a-bb3b-9222e5b877a0">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ee8153cc-c489-4b0e-a213-1bffde1500a7"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$F{empName}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="80" y="0" width="100" height="20" uuid="cd4ee374-13e6-4d68-ad88-83beb42b6ce3">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ee8153cc-c489-4b0e-a213-1bffde1500a7"/>
+                </reportElement>
+                <text><![CDATA[empName]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="180" y="20" width="100" height="30" uuid="131128cf-27d2-4f4b-86c8-5707384024d8"/>
+                <textFieldExpression><![CDATA[$F{empSal}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="180" y="-2" width="100" height="30" uuid="256a0e11-8f82-497b-a413-ca8e5ad12d87"/>
+                <text><![CDATA[empSal]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="280" y="20" width="100" height="30" uuid="a1047f32-7473-4f82-851c-429cec76e628"/>
+                <textFieldExpression><![CDATA[$F{empDept}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="280" y="-2" width="100" height="30" uuid="b72aec06-3210-4a2d-ba9c-aff21543bf84"/>
+                <text><![CDATA[empDept]]></text>
+            </staticText>
+        </band>
+    </detail>
+    <columnFooter>
+        <band/>
+    </columnFooter>
+    <pageFooter>
+        <band height="30">
+            <textField>
+                <reportElement mode="Opaque" x="0" y="4" width="555" height="26" backcolor="#E6E6E6" uuid="7517a056-3aa8-4b98-8947-4322d6997788"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+            </textField>
+            <textField evaluationTime="Report">
+                <reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="ee78f772-c382-47a1-ba1a-0cbe68329433"/>
+                <textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+            <textField pattern="EEEEE dd MMMMM yyyy">
+                <reportElement x="0" y="4" width="100" height="13" uuid="e626c549-c446-4704-95aa-ff487ab91ea4"/>
+                <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+    <summary>
+        <band/>
+    </summary>
+</jasperReport>

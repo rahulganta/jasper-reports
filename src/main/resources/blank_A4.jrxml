@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a79266a1-6393-4d32-9720-56a8f59ad785">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table 1_TH" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table_CH" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table 1_CH" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <subDataset name="employeeDataSet" uuid="dff2ebfc-1c4b-482b-ac08-a4dd7514aac7">
+        <queryString>
+            <![CDATA[]]>
+        </queryString>
+        <field name="empId" class="java.lang.Integer"/>
+        <field name="empName" class="java.lang.String"/>
+        <field name="empSal" class="java.lang.Double"/>
+        <field name="empDept" class="java.lang.String"/>
+    </subDataset>
+    <subDataset name="pieChartData" uuid="4b531918-1481-4e17-9649-4b7bfeb8849e">
+        <queryString>
+            <![CDATA[]]>
+        </queryString>
+        <field name="catogeryType" class="java.lang.String"/>
+        <field name="catogeryValue" class="java.lang.Float"/>
+    </subDataset>
+    <parameter name="patientName" class="java.lang.String"/>
+    <parameter name="domain" class="java.lang.String"/>
+    <parameter name="duration" class="java.lang.String"/>
+    <parameter name="admit" class="java.lang.String"/>
+    <parameter name="numOfFalls" class="java.lang.Integer"/>
+    <parameter name="timeOutOfCompliance" class="java.lang.String"/>
+    <parameter name="totalTurns" class="java.lang.Integer"/>
+    <parameter name="employeeDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+    <parameter name="pieChartDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <field name="catogeryValue" class="java.lang.Float"/>
+    <field name="catogeryType" class="java.lang.String"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="35" splitType="Stretch">
+            <property name="com.jaspersoft.studio.unit.height" value="px"/>
+            <staticText>
+                <reportElement x="40" y="13" width="150" height="20" uuid="ad4a5d27-88f6-48f6-b24f-d74207ca8dee"/>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <text><![CDATA[IRIS ANALYTICS]]></text>
+            </staticText>
+            <image>
+                <reportElement x="0" y="3" width="40" height="28" uuid="361dedaf-f3ce-40ee-b27a-3c6098036f0e"/>
+                <imageExpression><![CDATA["/Users/rahul.ganta/BitbucketProjects/Cardinal/jasper-reports/src/main/resources/static/img/cardinal_logo.png"]]></imageExpression>
+            </image>
+            <line>
+                <reportElement x="0" y="34" width="560" height="1" uuid="bf3e4784-9ced-42a1-bd0f-63da5d4b02d1"/>
+            </line>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="22" splitType="Stretch">
+            <property name="com.jaspersoft.studio.unit.height" value="px"/>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="86" splitType="Stretch">
+            <property name="com.jaspersoft.studio.unit.height" value="px"/>
+            <textField>
+                <reportElement x="20" y="23" width="100" height="30" uuid="943624c6-1483-4da5-a1e2-102367de6f33"/>
+                <textFieldExpression><![CDATA[$P{patientName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="156" y="23" width="100" height="30" uuid="73962c65-1e0b-4fd6-90eb-deee9e6f0162"/>
+                <textFieldExpression><![CDATA[$P{domain}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="315" y="23" width="100" height="30" uuid="d0a75070-43fb-4a9d-9bf6-059b25fd7874"/>
+                <textFieldExpression><![CDATA[$P{duration}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="451" y="23" width="100" height="30" uuid="8431774f-b88b-4bb1-94f1-bc07c68b0bf7"/>
+                <textFieldExpression><![CDATA[$P{admit}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="20" y="2" width="100" height="30" forecolor="#7F7F7F" uuid="466b9607-f701-4966-8b5a-d56003c94c10"/>
+                <text><![CDATA[PATIENT]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="156" y="2" width="100" height="30" forecolor="#7F7F7F" uuid="18405718-0ec2-4225-83d5-a7b2e03d32d0"/>
+                <text><![CDATA[DOMAIN]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="315" y="4" width="100" height="30" forecolor="#7F7F7F" uuid="1743a635-95bf-4106-83ca-79e274bd78dd"/>
+                <text><![CDATA[DURATION]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="451" y="4" width="100" height="30" forecolor="#7F7F7F" uuid="aabc7bf9-e39d-4b02-82d0-c7c6020decf6"/>
+                <text><![CDATA[ADMIT/DISCHARGE]]></text>
+            </staticText>
+            <line>
+                <reportElement x="0" y="57" width="554" height="2" uuid="3daebedd-a3f4-4acb-9f4b-91ae0d3361d3"/>
+                <graphicElement>
+                    <pen lineStyle="Dotted" lineColor="#7F7F7F"/>
+                </graphicElement>
+            </line>
+            <line>
+                <reportElement x="0" y="-2" width="554" height="2" uuid="fa355e7c-21ec-4e98-949a-70d43c881525"/>
+                <graphicElement>
+                    <pen lineStyle="Dotted" lineColor="#7F7F7F"/>
+                </graphicElement>
+            </line>
+            <staticText>
+                <reportElement x="180" y="63" width="200" height="15" uuid="0a03fecd-d6a1-4e0e-bd2a-e2750d253e5d"/>
+                <textElement textAlignment="Center">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[POSITION REPORT]]></text>
+            </staticText>
+            <line>
+                <reportElement x="0" y="81" width="554" height="2" uuid="0462c564-7c51-4bcf-a88b-fdf0d017b1ba"/>
+                <graphicElement>
+                    <pen lineStyle="Dotted" lineColor="#7F7F7F"/>
+                </graphicElement>
+            </line>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="578" splitType="Immediate">
+            <staticText>
+                <reportElement isPrintRepeatedValues="false" x="0" y="460" width="120" height="16" isPrintInFirstWholeBand="true" uuid="e34bf51b-f5ab-4886-9708-495a154b073f"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Time in position]]></text>
+            </staticText>
+            <staticText>
+                <reportElement isPrintRepeatedValues="false" x="0" y="4" width="100" height="16" isPrintInFirstWholeBand="true" uuid="550e6bc2-263e-4741-bc47-a84be2387748"/>
+                <text><![CDATA[Number of Falls]]></text>
+            </staticText>
+            <textField>
+                <reportElement isPrintRepeatedValues="false" x="136" y="4" width="100" height="16" isPrintInFirstWholeBand="true" uuid="448cb3d9-32a7-45b4-9fb7-50ceedaf5406"/>
+                <textFieldExpression><![CDATA[$P{numOfFalls}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement isPrintRepeatedValues="false" x="0" y="20" width="120" height="20" isPrintInFirstWholeBand="true" uuid="942182bc-8eef-40ae-9a20-ad4341bf24e7"/>
+                <text><![CDATA[Total out of compliance]]></text>
+            </staticText>
+            <textField>
+                <reportElement isPrintRepeatedValues="false" x="136" y="20" width="100" height="20" isPrintInFirstWholeBand="true" uuid="d92f5796-55c1-43e2-b8e4-f958e4c80b5e"/>
+                <textFieldExpression><![CDATA[$P{timeOutOfCompliance}]]></textFieldExpression>
+            </textField>
+            <componentElement>
+                <reportElement x="0" y="483" width="555" height="90" uuid="1a76aa79-6482-497e-810c-a43fbc0489ba">
+                    <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+                    <property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+                    <property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+                    <property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+                    <property name="com.jaspersoft.studio.components.autoresize.proportional" value="true"/>
+                    <property name="com.jaspersoft.studio.components.autoresize.next" value="true"/>
+                </reportElement>
+                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="employeeDataSet" uuid="7339d57c-b52b-4347-b822-7b92dc687e84">
+                        <dataSourceExpression><![CDATA[$P{employeeDataSource}]]></dataSourceExpression>
+                    </datasetRun>
+                    <jr:column width="60" uuid="9d1c3972-6123-41a3-8764-34d9a01054c9">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <box padding="5">
+                                <pen lineWidth="0.5" lineStyle="Dotted"/>
+                                <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <leftPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                                <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <rightPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                            </box>
+                            <staticText>
+                                <reportElement x="0" y="0" width="50" height="20" uuid="7694eb2a-5190-4fee-9970-803655ea5545"/>
+                                <text><![CDATA[POSITION]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <box padding="6">
+                                <pen lineStyle="Dotted"/>
+                                <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <leftPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                                <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <rightPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                            </box>
+                            <textField>
+                                <reportElement x="0" y="0" width="48" height="18" uuid="809a1caf-1e6a-4c7c-ac2f-707bb105993a"/>
+                                <textFieldExpression><![CDATA[$F{empId}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="166" uuid="06a7983c-f1c8-4e14-a2d5-2dfd18c1dfb0">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <box padding="5">
+                                <pen lineWidth="0.5" lineStyle="Dotted"/>
+                                <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <leftPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                                <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <rightPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                            </box>
+                            <staticText>
+                                <reportElement x="0" y="0" width="156" height="20" uuid="cdc4614f-d4b5-48f9-b53b-50c52302a6f3"/>
+                                <text><![CDATA[START]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <box padding="5">
+                                <pen lineWidth="0.5" lineStyle="Dotted"/>
+                                <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <leftPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                                <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <rightPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                            </box>
+                            <textField>
+                                <reportElement x="0" y="0" width="156" height="20" uuid="b6e4228e-33c5-4f20-b9b8-a2da413b0f3e"/>
+                                <textFieldExpression><![CDATA[$F{empName}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="165" uuid="ecc88d85-7600-445e-a017-e6a872d1f7ea">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <box padding="5">
+                                <pen lineWidth="0.5" lineStyle="Dotted"/>
+                                <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <leftPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                                <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <rightPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                            </box>
+                            <staticText>
+                                <reportElement x="0" y="0" width="155" height="20" uuid="5ad9f024-73ff-4d69-a265-a000a7df2957"/>
+                                <text><![CDATA[END]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <box padding="5">
+                                <pen lineWidth="0.5" lineStyle="Dotted"/>
+                                <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <leftPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                                <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <rightPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                            </box>
+                            <textField>
+                                <reportElement x="0" y="0" width="155" height="20" uuid="a179e142-5865-4c67-83e2-71b0731ec8fb"/>
+                                <box>
+                                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                    <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                </box>
+                                <textFieldExpression><![CDATA[$F{empSal}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="164" uuid="8bcf8c29-36c2-4f02-8ac4-11c5d34f5966">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+                        <jr:columnHeader style="Table_CH" height="30">
+                            <box padding="9">
+                                <pen lineWidth="0.5" lineStyle="Dotted"/>
+                                <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <leftPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                                <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <rightPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                            </box>
+                            <staticText>
+                                <reportElement x="0" y="0" width="146" height="12" uuid="70d70aa3-0484-45da-98fe-3277a2ed9d6f"/>
+                                <text><![CDATA[DURATION]]></text>
+                            </staticText>
+                        </jr:columnHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <box padding="5">
+                                <pen lineWidth="0.5" lineStyle="Dotted"/>
+                                <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <leftPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                                <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                <rightPen lineWidth="0.5" lineStyle="Dotted" lineColor="#000000"/>
+                            </box>
+                            <textField>
+                                <reportElement x="0" y="0" width="154" height="20" uuid="0dd5c2c9-7345-4d5e-9d8a-a1c437cca5a4"/>
+                                <box>
+                                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                    <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                                </box>
+                                <textFieldExpression><![CDATA[$F{empDept}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                </jr:table>
+            </componentElement>
+            <staticText>
+                <reportElement x="0" y="40" width="100" height="20" uuid="68ea7d9a-c3eb-4c93-80c4-7dee2004712e"/>
+                <text><![CDATA[Total turns]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="60" width="100" height="20" uuid="26c1baed-81fd-4f95-b5b4-f5b9e16c3003"/>
+                <text><![CDATA[Turns/hour]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="100" width="100" height="20" uuid="200ce24e-04bc-4f25-b801-963a5abdf15e"/>
+                <text><![CDATA[Total time]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="120" width="100" height="21" uuid="f316c9d1-04b4-48a5-93f5-1788579948cd"/>
+                <text><![CDATA[Monitored]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="141" width="100" height="25" uuid="8e1f4720-b235-47f4-b3e9-f5df4ba62d5b"/>
+                <text><![CDATA[In compliance]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="166" width="100" height="20" uuid="57e95bc9-8d21-4d89-8b6f-83b4e3ec9525"/>
+                <text><![CDATA[Out of compliance]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="211" width="100" height="19" uuid="3328b039-666d-4860-8989-ac988b691992"/>
+                <text><![CDATA[Left]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="230" width="100" height="20" uuid="b46da2ff-63fb-43e0-a074-af6c814d7af3"/>
+                <text><![CDATA[Right]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="250" width="100" height="20" uuid="bf4c7a52-047d-4d69-95e0-0c3c084f67b6"/>
+                <text><![CDATA[Supine]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="136" y="40" width="100" height="20" uuid="bd5391cc-783f-45bd-821f-7ea61b5878cc"/>
+                <textFieldExpression><![CDATA[$P{totalTurns}]]></textFieldExpression>
+            </textField>
+            <line>
+                <reportElement x="253" y="4" width="1" height="256" uuid="916a1d8f-b9fb-4eba-8702-68fdecc8c8a3"/>
+                <graphicElement>
+                    <pen lineWidth="0.5" lineStyle="Solid" lineColor="#7F7F7F"/>
+                </graphicElement>
+            </line>
+            <staticText>
+                <reportElement x="260" y="4" width="100" height="16" uuid="be894207-0b81-405e-96e3-fecc2986fafb"/>
+                <text><![CDATA[Non Compliance Events]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="260" y="20" width="294" height="40" uuid="7b73bcb2-c481-4fc0-a648-a2b955c09afc"/>
+                <text><![CDATA[An event is defined by a patient remaining in the same position longer than the position duration set on device.]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="260" y="80" width="100" height="20" uuid="9070f922-7516-4e96-a48d-bb6baffca82b"/>
+                <text><![CDATA[Average length]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="260" y="100" width="140" height="20" uuid="ac8719e3-58a1-42cb-808a-1a18cfbf1c4f"/>
+                <text><![CDATA[Event index(events/hours]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="260" y="163" width="100" height="26" uuid="4c55405b-28c2-42f6-8610-c7d7f93c5dd2"/>
+                <text><![CDATA[Sensor Exceptions]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="260" y="189" width="100" height="25" uuid="4bdf323d-8a3f-4471-b579-71048d66be3c"/>
+                <text><![CDATA[Sensor on standby ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="260" y="214" width="140" height="26" uuid="581a1e19-8277-471e-bcfb-ef3f31416c18"/>
+                <text><![CDATA[Senson off/Disconnected]]></text>
+            </staticText>
+            <line>
+                <reportElement x="127" y="100" width="1" height="160" uuid="63c6775a-0df8-4ab9-bec1-3ad819091874"/>
+                <graphicElement>
+                    <pen lineWidth="0.25" lineStyle="Dashed" lineColor="#7F7F7F"/>
+                </graphicElement>
+            </line>
+            <pieChart>
+                <chart isShowLegend="true" evaluationTime="Report">
+                    <reportElement key="" style="Table 1_TD" x="0" y="290" width="180" height="142" uuid="9b894d21-8ca4-4bc4-baf3-354f98f0b7b1"/>
+                    <box>
+                        <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                        <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                        <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                        <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    </box>
+                    <chartTitle>
+                        <titleExpression><![CDATA["Compliance (% of total time)"]]></titleExpression>
+                    </chartTitle>
+                    <chartSubtitle/>
+                    <chartLegend position="Bottom">
+                        <font size="8"/>
+                    </chartLegend>
+                </chart>
+                <pieDataset maxCount="2">
+                    <dataset resetType="Report">
+                        <datasetRun subDataset="pieChartData" uuid="ee9bfaaf-c9fc-438f-9b90-49912df47160">
+                            <dataSourceExpression><![CDATA[$P{pieChartDataSource}]]></dataSourceExpression>
+                        </datasetRun>
+                    </dataset>
+                    <keyExpression><![CDATA[$F{catogeryType}]]></keyExpression>
+                    <valueExpression><![CDATA[$F{catogeryValue}]]></valueExpression>
+                    <labelExpression><![CDATA[$F{catogeryValue}+""]]></labelExpression>
+                </pieDataset>
+                <piePlot labelFormat="" legendLabelFormat="{0}">
+                    <plot>
+                        <seriesColor seriesOrder="0" color="#575052"/>
+                        <seriesColor seriesOrder="1" color="#E07B28"/>
+                    </plot>
+                    <itemLabel/>
+                </piePlot>
+            </pieChart>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="68" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="45" splitType="Stretch">
+            <property name="com.jaspersoft.studio.unit.height" value="px"/>
+            <image>
+                <reportElement x="0" y="8" width="50" height="29" uuid="45132c26-fb93-401f-8229-3c8224d71883"/>
+                <imageExpression><![CDATA["/Users/rahul.ganta/BitbucketProjects/Cardinal/jasper-reports/src/main/resources/static/img/masimo_logo.png"]]></imageExpression>
+            </image>
+            <textField>
+                <reportElement x="190" y="22" width="180" height="20" uuid="81719524-43b5-4097-9a7a-e1d7c14f9a19"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of "+ $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="340" y="22" width="214" height="20" uuid="62abddf5-f1f6-4269-b157-2e5dfb77bb55"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font size="9"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Created On " +new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="380" y="5" width="174" height="17" uuid="7eca95b8-410c-4852-b063-035052e6c6c5"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font size="9"/>
+                </textElement>
+                <text><![CDATA[Confidential Patient Information]]></text>
+            </staticText>
+            <line>
+                <reportElement x="0" y="1" width="554" height="2" uuid="ff9f74e8-3ca4-44f9-a175-5639b71fcbaa"/>
+                <graphicElement>
+                    <pen lineStyle="Dotted" lineColor="#7F7F7F"/>
+                </graphicElement>
+            </line>
+        </band>
+    </pageFooter>
+</jasperReport>

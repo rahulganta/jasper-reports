@@ -1,0 +1,13 @@
+server:
+  port: 9292
+
+pdfReport:
+  dir: ./reports/
+  fileName: Employee-Report
+  fileNameDateFormat: dd_MMMM_yyyy_HH-mm-ss
+  localDateFormat: "dd MMMM yyyy HH:mm:ss"
+  logoImgPath: src/main/resources/static/img/masimo_logo.png
+  logoImgScale: 10,10
+  currencySymbol: $
+  table_noOfColumns: 4
+  table.columnNames: Emp Id,Emp Name,Emp Dept,Emp Sal

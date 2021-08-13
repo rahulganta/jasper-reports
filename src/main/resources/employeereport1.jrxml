@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Simple_Blue" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="16d35d71-0f27-401c-953d-0497e43ed930">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="patientName" class="java.lang.String"/>
+    <parameter name="domain" class="java.lang.String"/>
+    <parameter name="duration" class="java.lang.String"/>
+    <parameter name="admit" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <background>
+        <band height="74"/>
+    </background>
+    <title>
+        <band height="72">
+            <frame>
+                <reportElement mode="Opaque" x="-20" y="-10" width="595" height="82" backcolor="#FFFFFF" uuid="a58349d4-b6a4-46a8-b503-4d862e5c9c63"/>
+                <frame>
+                    <reportElement x="100" y="30" width="200" height="33" uuid="d898117b-5d16-406c-8dbd-e6e579a3c26d"/>
+                    <frame>
+                        <reportElement x="-30" y="10" width="224" height="42" uuid="6e47b64b-cc11-4be4-9120-0f903f37e378"/>
+                        <staticText>
+                            <reportElement x="-23" y="5" width="210" height="33" forecolor="#000000" uuid="4e4d74f2-e9ed-4a0e-b1c8-24e8043429c6">
+                                <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+                                <property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+                            </reportElement>
+                            <textElement>
+                                <font size="16" isBold="false"/>
+                            </textElement>
+                            <text><![CDATA[IRIS ANALYTICS]]></text>
+                        </staticText>
+                    </frame>
+                </frame>
+                <line>
+                    <reportElement x="20" y="72" width="555" height="1" forecolor="#666666" uuid="0cfb56b5-3bdc-4a23-b5c5-f720e1eb4ef7"/>
+                </line>
+                <image>
+                    <reportElement x="17" y="41" width="30" height="23" uuid="f51dc335-e5cd-40f2-b06e-fbdd3a6e9fb5"/>
+                    <imageExpression><![CDATA["/Users/rahul.ganta/BitbucketProjects/Cardinal/jasper-reports/src/main/resources/static/img/cardinal_logo.png"]]></imageExpression>
+                </image>
+            </frame>
+        </band>
+    </title>
+    <pageHeader>
+        <band/>
+    </pageHeader>
+    <columnHeader>
+        <band height="61">
+            <staticText>
+                <reportElement x="0" y="2" width="100" height="21" forecolor="#7F7F7F" uuid="0a5b5f39-cc76-449c-90a7-00fce381be54">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1f6b0801-23bd-49eb-b4f0-77016eb9915e"/>
+                </reportElement>
+                <text><![CDATA[PATIENT]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="120" y="2" width="100" height="21" forecolor="#7F7F7F" uuid="a79c40d3-3506-4b46-aad3-4c06c49a3140">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6deacd43-e996-43d2-a4c2-da9281ffbad9"/>
+                </reportElement>
+                <text><![CDATA[DOMAIN]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="0" y="25" width="100" height="31" uuid="22a087fd-dc0b-4ff1-8e90-5b5c36082f70"/>
+                <textFieldExpression><![CDATA[$P{patientName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="120" y="25" width="100" height="31" uuid="8424876b-ec60-4b49-9e97-aa55736c28b6"/>
+                <textFieldExpression><![CDATA[$P{domain}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="250" y="25" width="100" height="31" uuid="93ee4a14-ff8a-42f9-8562-37928bc4cb9d"/>
+                <textFieldExpression><![CDATA[$P{duration}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="250" y="1" width="100" height="17" forecolor="#7F7F7F" uuid="ef0386a6-6874-4943-908b-d9c55fcc8179">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6deacd43-e996-43d2-a4c2-da9281ffbad9"/>
+                </reportElement>
+                <text><![CDATA[DURATION]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="380" y="1" width="120" height="21" forecolor="#7F7F7F" uuid="6f54f828-a27e-4abe-96b1-bf96bfad5111">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6deacd43-e996-43d2-a4c2-da9281ffbad9"/>
+                </reportElement>
+                <text><![CDATA[ADMIT/DISCHARGE]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="380" y="26" width="164" height="30" uuid="9751d0a5-6432-4e09-8467-48dc0d762a5d"/>
+                <textFieldExpression><![CDATA[$P{admit}]]></textFieldExpression>
+            </textField>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="219">
+            <staticText>
+                <reportElement x="180" y="8" width="200" height="20" uuid="2143cf11-1f81-4e71-8a49-6b2b414d14ed"/>
+                <box>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[POSITION REPORT]]></text>
+            </staticText>
+            <line>
+                <reportElement x="0" y="30" width="555" height="1" uuid="25b14da0-355b-4993-a229-21026940f814"/>
+                <graphicElement>
+                    <pen lineWidth="1.0" lineStyle="Dotted" lineColor="#7F7F7F"/>
+                </graphicElement>
+            </line>
+            <line>
+                <reportElement x="0" y="2" width="555" height="1" uuid="dda9664a-3a39-44b5-9a40-b01e84815d34"/>
+                <graphicElement>
+                    <pen lineStyle="Dotted" lineColor="#7F7F7F"/>
+                </graphicElement>
+            </line>
+        </band>
+    </detail>
+    <columnFooter>
+        <band/>
+    </columnFooter>
+    <pageFooter>
+        <band height="61">
+            <textField>
+                <reportElement mode="Opaque" x="190" y="27" width="196" height="13" backcolor="#FFFFFF" uuid="7517a056-3aa8-4b98-8947-4322d6997788"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of "+ $V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+            <image>
+                <reportElement x="0" y="15" width="80" height="34" uuid="d871808a-f4a4-4864-8b76-5c2756ed5945"/>
+                <imageExpression><![CDATA["/Users/rahul.ganta/BitbucketProjects/Cardinal/jasper-reports/src/main/resources/static/img/masimo_logo.png"]]></imageExpression>
+            </image>
+            <textField pattern="EEEEE dd MMMMM yyyy">
+                <reportElement x="429" y="28" width="125" height="13" uuid="e626c549-c446-4704-95aa-ff487ab91ea4"/>
+                <textElement textAlignment="Right"/>
+                <textFieldExpression><![CDATA["Created On " +new java.util.Date()]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="385" y="11" width="169" height="21" uuid="4ea1b541-d31b-425c-be8f-824e6369f45c"/>
+                <box topPadding="0">
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Right"/>
+                <text><![CDATA[Confidential Patient Information]]></text>
+            </staticText>
+            <line>
+                <reportElement x="-3" y="7" width="558" height="1" uuid="ed01db6d-127e-4b53-9454-9ec6d222db11"/>
+                <graphicElement>
+                    <pen lineStyle="Dotted" lineColor="#7F7F7F"/>
+                </graphicElement>
+            </line>
+        </band>
+    </pageFooter>
+    <summary>
+        <band/>
+    </summary>
+</jasperReport>
